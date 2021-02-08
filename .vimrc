@@ -149,7 +149,6 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'Chiel92/vim-autoformat'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'jiangmiao/auto-pairs'
-Plug 'lambdalisue/vim-django-support'
 Plug 'alvan/vim-closetag'
   let g:closetag_filenames = '*.html,*.xhtml,*.xml,*.vue,*.php,*.phtml,*.js,*.jsx,*.coffee,*.erb'
 
@@ -175,7 +174,6 @@ Plug 'scrooloose/nerdtree'
 " ========= rails
 Plug 'kchmck/vim-coffee-script'
 Plug 'thoughtbot/vim-rspec'
-Plug 'tpope/vim-rails'
 Plug 'ngmy/vim-rubocop'
 " ========= navigation
 Plug 'christoomey/vim-tmux-navigator'
