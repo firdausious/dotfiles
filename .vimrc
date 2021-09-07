@@ -4,6 +4,11 @@ runtime macros/matchit.vim
 set is
 set encoding=utf-8
 
+if (has("termguicolors"))
+set termguicolors
+endif
+syntax enable
+
 call plug#begin('~/.vim/plugged')
 
 " ========== autocomplete
@@ -57,7 +62,10 @@ set splitright
 Plug 'leafgarland/typescript-vim'
 Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
+Plug 'peitalin/vim-jsx-typescript'
+Plug 'ryanoasis/vim-devicons'
 Plug 'w0rp/ale'
+Plug 'preservim/nerdcommenter'
 
 let g:ale_linters = {
       \   'python': ['flake8', 'pylint'],
@@ -245,7 +253,7 @@ colorscheme xcodedarkhc
 :hi EndOfBuffer ctermbg=NONE guibg=NONE
 
 " tabs to 2 spaces
-" set smartindent
+set smartindent
 set tabstop=2
 set shiftwidth=2
 set expandtab
