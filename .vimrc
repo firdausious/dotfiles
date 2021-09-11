@@ -63,7 +63,6 @@ Plug 'leafgarland/typescript-vim'
 Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
 Plug 'peitalin/vim-jsx-typescript'
-Plug 'ryanoasis/vim-devicons'
 Plug 'w0rp/ale'
 Plug 'preservim/nerdcommenter'
 
@@ -237,6 +236,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 
+Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
 filetype plugin indent on    " required
@@ -254,6 +254,7 @@ colorscheme xcodedarkhc
 :hi EndOfBuffer ctermbg=NONE guibg=NONE
 
 " tabs to 2 spaces
+set scrolloff=8
 set smartindent
 set tabstop=2
 set shiftwidth=2
