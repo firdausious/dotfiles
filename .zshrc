@@ -89,21 +89,15 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
-  docker
-  bundler
   dotenv
-  osx
-  rake
-  rbenv
-  ruby
   jsontools
-  node
-  pip
   web-search
   zsh-autosuggestions
+  zsh_reload
+  zsh-syntax-highlighting
   colored-man-pages
-  colorize
   common-aliases
+  copydir
   copyfile
 )
 
