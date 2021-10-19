@@ -1,10 +1,12 @@
 #!/bin/bash
 
 ## common
-brew install gpg gawk
+brew install gnupg gpg gawk
+brew install yadm stats tree
+brew install imagemagick librsvg
 
-## devtools
-brew install asdf
+## sdk
+brew install asdf watchman cocoapods
 
 asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
 asdf plugin add java https://github.com/halcyon/asdf-java.git
@@ -49,4 +51,11 @@ asdf global rust latest
 # asdf global php latest
 
 ### additional tools
-npm install -g envinfo
+npm install -g npm-check-updates nls envinfo
+brew install fastlane
+
+## 3rd Party
+npm install -g firebase-tools appcenter-cli @sentry/cli
+
+## IDE / Editors
+brew install tmux neovim ripgrep fzf jq fd bat
