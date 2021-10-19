@@ -33,5 +33,20 @@ asdf install java zulu-11.50.19
 asdf install java zulu-17.28.13
 asdf global java zulu-17.28.13
 
+### Golang
+asdf install golang latest
+asdf global golang latest
+
+### Rust
+export RUST_WITHOUT=rust-docs
+asdf install rust latest
+asdf global rust latest
+
+### PHP, TODO: still not working
+# brew install bison re2c libgd libiconv pkg-config gmp libsodium imagemagick
+# y | cpan GD
+# asdf install php latest
+# asdf global php latest
+
 ### additional tools
 npm install -g envinfo
