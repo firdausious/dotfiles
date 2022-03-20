@@ -14,6 +14,27 @@ call plug#begin('~/.vim/plugged')
 " ========== autocomplete
 Plug 'styled-components/vim-styled-components'
 Plug 'mattn/emmet-vim'
+let g:user_emmet_settings = {
+    \  'variables': {'lang': 'en'},
+    \  'html': {
+    \    'default_attributes': {
+    \      'option': {'value': v:null},
+    \      'textarea': {'id': v:null, 'name': v:null, 'cols': 10, 'rows': 10},
+    \    },
+    \    'snippets': {
+    \      'html:5': "<!DOCTYPE html>\n"
+    \              ."<html lang=\"${lang}\">\n"
+    \              ."<head>\n"
+    \              ."\t<meta charset=\"${charset}\">\n"
+    \              ."\t<title></title>\n"
+    \              ."\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n"
+    \              ."</head>\n"
+    \              ."<body>\n\t${child}|\n</body>\n"
+    \              ."</html>",
+    \    },
+    \  },
+    \}
+
 Plug 'ervandew/supertab'
 Plug 'luochen1990/rainbow'
 let g:rainbow_active = 1 "0
@@ -63,16 +84,21 @@ Plug 'leafgarland/typescript-vim'
 Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
 Plug 'peitalin/vim-jsx-typescript'
-Plug 'w0rp/ale'
+Plug 'dense-analysis/ale'
 Plug 'preservim/nerdcommenter'
+Plug 'camspiers/animate.vim'
+Plug 'camspiers/lens.vim'
+Plug 'wellle/context.vim'
 
+let g:lens#disabled_filetypes = ['nerdtree', 'fzf']
+
+let g:ale_fix_on_save = 1
 let g:ale_linters = {
       \   'python': ['flake8', 'pylint'],
       \   'javascript': ['eslint'],
       \   'vue': ['eslint']
       \
       \}
-
 let g:ale_fixers = {
       \    '*': ['remove_trailing_lines', 'trim_whitespace'],
       \    'javascript': ['eslint'],
@@ -103,7 +129,6 @@ let g:startify_commands = [
     \ ['🏊 git browser', 'GV'],
     \ ['🥶 Update plugins', 'PlugUpdate'],
     \ ]
-let g:ale_fix_on_save = 1
 let g:jsx_ext_required = 1
 let g:jsx_pragma_required = 1
 

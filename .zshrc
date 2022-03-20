@@ -95,7 +95,7 @@ plugins=(
   zsh-syntax-highlighting
   colored-man-pages
   common-aliases
-  copydir
+  copypath
   copyfile
 )
 
