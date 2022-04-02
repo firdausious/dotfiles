@@ -43,11 +43,7 @@ let mapleader = ","
 " ========= snippets
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'honza/vim-snippets'
-" Plug 'SirVer/ultisnips'
 Plug 'Yggdroot/indentLine'
-Plug 'mhinz/vim-startify'
-let g:indentLine_char = '.'
-
 Plug 'epilande/vim-es2015-snippets'
 Plug 'epilande/vim-react-snippets'
 Plug 'easymotion/vim-easymotion'
@@ -55,11 +51,6 @@ Plug 'easymotion/vim-easymotion'
 let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
 let g:SuperTabDefaultCompletionType = '<C-n>'
-
-" better key bindings for UltiSnipsExpandTrigger
-" let g:UltiSnipsExpandTrigger = "<Tab>"
-" let g:UltiSnipsJumpForwardTrigger = "<Tab>"
-" let g:UltiSnipsJumpBackwardTrigger = "<s-Tab>"
 
 " ========== ruby plugins
 Plug 'tpope/vim-dispatch'
@@ -81,6 +72,7 @@ set splitbelow
 set splitright
 
 Plug 'leafgarland/typescript-vim'
+Plug 'sheerun/vim-polyglot'
 Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
 Plug 'peitalin/vim-jsx-typescript'
@@ -107,28 +99,6 @@ let g:ale_fixers = {
       \
       \}
 
-
-" set up ascii for my startify
-let g:startify_custom_header = [
-    \ '     ____ _            __                     _                    ',
-    \ '    / __/(_)_____ ____/ /____ _ __  __ _____ (_)____   __  __ _____',
-    \ '   / /_ / // ___// __  // __ `// / / // ___// // __ \ / / / // ___/',
-    \ '  / __// // /   / /_/ // /_/ // /_/ /(__  )/ // /_/ // /_/ /(__  ) ',
-    \ ' /_/  /_//_/    \__,_/ \__,_/ \__,_//____//_/ \____/ \__,_//____/  ',
-    \ ]
-let g:startify_lists = [
-      \ { 'type': 'sessions',  'header': ['   Sessions']       },
-      \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
-      \ { 'type': 'commands',  'header': ['   Commands']       },
-      \ ]
-let g:startify_commands = [
-    \ ['❓ vim help', 'h ref'],
-    \ ['🕵️ search fuzzy', 'Rg'],
-    \ ['🔎 search file', 'Files'],
-    \ ['🌴 nav', 'NERDTree'],
-    \ ['🏊 git browser', 'GV'],
-    \ ['🥶 Update plugins', 'PlugUpdate'],
-    \ ]
 let g:jsx_ext_required = 1
 let g:jsx_pragma_required = 1
 
@@ -226,6 +196,39 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-eunuch'
 
 " ======= extras
+Plug 'glepnir/dashboard-nvim'
+
+let g:indentLine_char = '.'
+let g:dashboard_default_executive = 'fzf'
+
+let g:dashboard_custom_header = [
+  \'     ____ _            __                     _                    ',
+  \'    / __/(_)_____ ____/ /____ _ __  __ _____ (_)____   __  __ _____',
+  \'   / /_ / // ___// __  // __ `// / / // ___// // __ \ / / / // ___/',
+  \'  / __// // /   / /_/ // /_/ // /_/ /(__  )/ // /_/ // /_/ /(__  ) ',
+  \' /_/  /_//_/    \__,_/ \__,_/ \__,_//____//_/ \____/ \__,_//____/  ',
+  \'                                                                   ',
+  \'                                                                   ',
+  \'                          ▄▄██████████▄▄             ',
+  \'                          ▀▀▀   ██   ▀▀▀             ',
+  \'                  ▄██▄   ▄▄████████████▄▄   ▄██▄     ',
+  \'                ▄███▀  ▄████▀▀▀    ▀▀▀████▄  ▀███▄   ',
+  \'               ████▄ ▄███▀              ▀███▄ ▄████  ',
+  \'              ███▀█████▀▄████▄      ▄████▄▀█████▀███ ',
+  \'              ██▀  ███▀ ██████      ██████ ▀███  ▀██ ',
+  \'               ▀  ▄██▀  ▀████▀  ▄▄  ▀████▀  ▀██▄  ▀  ',
+  \'                  ███           ▀▀           ███     ',
+  \'                  ██████████████████████████████     ',
+  \'              ▄█  ▀██  ███   ██    ██   ███  ██▀  █▄ ',
+  \'              ███  ███ ███   ██    ██   ███▄███  ███ ',
+  \'              ▀██▄████████   ██    ██   ████████▄██▀ ',
+  \'               ▀███▀ ▀████   ██    ██   ████▀ ▀███▀  ',
+  \'                ▀███▄  ▀███████    ███████▀  ▄███▀   ',
+  \'                  ▀███    ▀▀██████████▀▀▀   ███▀     ',
+  \'                    ▀    ▄▄▄    ██    ▄▄▄    ▀       ',
+  \'                          ▀████████████▀             ',
+\]
+
 Plug 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plug 'majutsushi/tagbar'
 Plug 'wincent/command-t'

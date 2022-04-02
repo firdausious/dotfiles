@@ -12,10 +12,12 @@ eval $(/opt/homebrew/bin/brew shellenv)
 
 # Devtools: Android
 export ANDROID_HOME=$HOME/Library/Android/sdk
+export SONAR_PATH=$HOME/Works/system/sonar-scanner-4.7.0.2747-macosx
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:$ANDROID_HOME/build-tools/30.0.3
+export PATH=$PATH:$SONAR_PATH/bin
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/firdaus/.oh-my-zsh"
